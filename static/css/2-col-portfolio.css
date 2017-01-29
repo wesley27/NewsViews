@@ -12,6 +12,22 @@ body {
     margin-bottom: 25px;
 }
 
+#two {
+	.style {
+		width: 400px;
+	}
+}
+
+
+
 footer {
     margin: 50px 0;
+}
+
+#firstarticle {
+	width: 100%;
+}
+
+#secondarticle {
+	width: 100%;
 }

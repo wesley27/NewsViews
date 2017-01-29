@@ -43,7 +43,7 @@ template {
   display: none;
 }
 a {
-  background-color: transparent;
+  background-color: #7079AD;
 }
 a:active,
 a:hover {
@@ -1086,7 +1086,6 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
 }
 input,
 button,
@@ -3117,6 +3116,7 @@ fieldset[disabled] .btn-default.focus {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
+
 }
 .btn-primary:focus,
 .btn-primary.focus {
@@ -6544,6 +6544,26 @@ button.close {
 .affix {
   position: fixed;
 }
+
+.frost{
+   background: rgba(245, 245, 245, 0.9);
+    height: 88px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    -webkit-filter:blur(10px);
+    filter: url(#blur-effect-1);
+}
+
+.masthead {
+    z-index:1100;
+}
+
+body {
+    background: url(http://solohntr.com/wp-content/uploads/2014/12/blur-bg.jpg) no-repeat center center fixed; 
+}
+
 @-ms-viewport {
   width: device-width;
 }
@@ -6754,4 +6774,5 @@ button.close {
     display: none !important;
   }
 }
+
 /*# sourceMappingURL=bootstrap.css.map */
