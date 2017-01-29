@@ -28,7 +28,6 @@
 </head>
 
 <body>
-
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -60,17 +59,25 @@
         <!-- Page Header -->
         <div class="row">
             <div class="col-lg-12">
-                <form action="/entry" method="post" class="form-inline">
+                <form action="/entry" method="post" class="form-inline text-center">
                     <div class="form-group">
-                        <select name="Country 1" class="form-control">
-                            <option value="United States">United States</option>
-                            <option value="Mexico">Mexico</option>
-                            <option value="Canada">Canada</option>
+                        <select name="News Source 1" class="form-control">
+                            <option value="English">English/American News</option>
+                            <option value="Hispanic">Hispanic News</option>
+                            <option value="Italian">Italian News</option>
+                            <option value="Russian">Russian News</option>
+                            <option value="German">German News</option>
+                            <option value="Chinese">Chinese News</option>
+                            <option value="French">French News</option>
                         </select>
-                        <select name="Country 2" class="form-control">
-                            <option value="United States">United States</option>
-                            <option value="Mexico">Mexico</option>
-                            <option value="Canada">Canada</option>
+                        <select name="News Source 2" class="form-control">
+                            <option value="English">English/American News</option>
+                            <option value="Hispanic">Hispanic News</option>
+                            <option value="Italian">Italian News</option>
+                            <option value="Russian">Russian News</option>
+                            <option value="German">German News</option>
+                            <option value="Chinese">Chinese News</option>
+                            <option value="French">French News</option>
                         </select>
                         <input type="text" name="search" class="form-control" placeholder="Search..." required>
                         <input id="search" class="btn btn-primary" type="submit" value="Enter">
@@ -80,16 +87,69 @@
         </div>
         <!-- /.row -->
 
+        <!-- One -->
+        <div class="row" id="one" style="display: {{ one }}">
+            <div class="col-md-3 portfolio-item">
+                <form action="" method="post" class="form-inline text-center" id="list">
+                    <input class="btn btn-info" type="submit" value="Enter">
+                </form>
+            </div>
+        </div>
+
         <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-6 portfolio-item">
-                <h3>Article One</h3>
-                <iframe width=100% style="height: 100vh;" src="http://www.cnn.com/2017/01/28/politics/donald-trump-executive-order-immigration-reaction/index.html"></iframe>
-            </div>
-            <div class="col-md-6 portfolio-item">
-                <h3>Article Two</h3>
-                <iframe width=100% style="height: 100vh;" src="http://insider.foxnews.com/2017/01/28/frame-shop-turns-away-customer-due-donald-trump-support-inauguration"></iframe>
-            </div>
+        <div class="row" id="two" style="display: {{ two }}">
+            <form action="/entry" method="post" class="form-inline text-center">
+                <div class="col-md-6 portfolio-item">
+                    <h3>Article One</h3>
+                    <div class="btn-group" data-toggle="buttons" id="firstarticle">
+                        <br />
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option1" autocomplete="off"> {{ data1[0] }}
+                        </label>
+                        <br />
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option2" autocomplete="off"> {{ data1[1] }}
+                        </label>
+                        <br />
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> {{ data1[2] }}
+                        </label>
+                        <br />
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> {{ data1[3] }}
+                        </label>
+                        <br />
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> {{ data1[4] }}
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-6 portfolio-item">
+                    <h3>Article Two</h3>
+                    <div class="btn-group" data-toggle="buttons" id="firstarticle">
+                        <br />
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option1" autocomplete="off"> {{ data2[0] }}
+                        </label>
+                        <br />
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option2" autocomplete="off"> {{ data2[1] }}
+                        </label>
+                        <br />
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> {{ data2[2] }}
+                        </label>
+                        <br />
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> {{ data2[3] }}
+                        </label>
+                        <br />
+                        <label class="btn btn-primary">
+                            <input type="radio" name="options" id="option3" autocomplete="off"> {{ data2[4] }}
+                        </label>
+                    </div>
+                </div>
+            </form>
         </div>
 
         <!-- /.row -->
@@ -114,9 +174,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="/static/js/bootstrap.min.js"></script>
-
-    <!-- Custom JavaScript -->
-    <script src="/static/js/index.js"></script>
 
 </body>
 
