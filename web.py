@@ -118,8 +118,11 @@ def getLanguage(source):
 def parseTitles(s, article_id):
     titles = []
     for i in range(0,len(s[article_id]["articles"]["results"])):
-        titles.append(s[article_id]["articles"]["results"][i]["source"]["title"] + ": " +     s[article_id]["articles"]["results"][i]["title"])
-        titles.append(    s[article_id]["articles"]["results"][i]["url"])
+        if len(s[article_id]["articles"]["results"][i]["source"]["title"] + ": " +     s[article_id]["articles"]["results"][i]["title"]) > 77:
+            titles.append((s[article_id]["articles"]["results"][i]["source"]["title"] + ": " +     s[article_id]["articles"]["results"][i]["title"])[:77] + "...")
+        else:
+            titles.append(s[article_id]["articles"]["results"][i]["source"]["title"] + ": " +     s[article_id]["articles"]["results"][i]["title"])
+        titles.append(s[article_id]["articles"]["results"][i]["url"])
     return titles
 
 if __name__ == '__main__':
